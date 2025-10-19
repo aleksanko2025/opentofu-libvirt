@@ -17,16 +17,16 @@ resource "libvirt_network" "nat-dhcp" {
   autostart = true
 }
 
-#resource "libvirt_network" "new-nat-dhcp" {
-#  name      = "new-nat-dhcp"
-#  mode      = "nat"
-#  domain    = "example.com"
-#  addresses = ["192.168.20.0/24"]
-#  bridge    = "virbr101"
-#  dhcp { enabled = true }
-#  dns { enabled = true }
-#  autostart = true
-#}
+resource "libvirt_network" "new-nat-dhcp" {
+  name      = "new-nat-dhcp"
+  mode      = "nat"
+  domain    = "example.com"
+  addresses = ["192.168.20.0/24"]
+  bridge    = "virbr101"
+  dhcp { enabled = true }
+  dns { enabled = true }
+  autostart = true
+}
 
 
 ##############################################
