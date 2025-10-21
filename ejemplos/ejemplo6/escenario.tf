@@ -13,7 +13,7 @@ locals {
       name      = "nat-dhcp"
       mode      = "nat"
       domain    = "example.com"
-      addresses = ["192.168.100.0/24"]
+      addresses = ["192.168.110.0/24"]
       bridge    = "virbr10"
       dhcp      = true
       dns       = true
