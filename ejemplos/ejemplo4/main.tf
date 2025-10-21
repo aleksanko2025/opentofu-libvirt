@@ -41,6 +41,11 @@ resource "libvirt_domain" "server1" {
     network_id = libvirt_network.aislada-static.id
   }
 
+  # Red 3: Red muy-aislada
+  network_interface {
+    network_id = libvirt_network.muy-aislada.id
+  }
+
 
   disk { volume_id = libvirt_volume.server1-disk.id }
   # Segundo disco
