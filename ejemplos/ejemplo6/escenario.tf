@@ -85,7 +85,6 @@ locals {
       base_image = "ubuntu2404-base.qcow2"
 
       networks = [
-        { network_name = "nat-dhcp", wait_for_lease = true },
         { network_name = "muy-aislada" },
         { network_name = "new-nat", wait_for_lease = true }
       ]
